@@ -13,7 +13,7 @@
 # Étape 1 : build de l'application
 FROM eclipse-temurin:17-jdk AS build
 WORKDIR /app
-COPY Groupe6Hackaton/ ./
+COPY . ./
 RUN ./mvnw clean package -DskipTests
 
 # Étape 2 : image de production
