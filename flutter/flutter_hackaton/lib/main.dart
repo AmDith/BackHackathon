@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hackaton/views/etudiants/screen/liste_absences.dart';
+import 'package:flutter_hackaton/views/shared/screen/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,72 +25,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF5A623),
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              // Logo
-              Image.asset(
-                'assets/images/ism.jpg',
-                width: 150,
-              ),
-              const SizedBox(height: 30),
-
-              const SizedBox(height: 20),
-
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      hintText: "Identifiant",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 15),
-
-                  TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      hintText: "Mot de passe",
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 25),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 120.0, vertical: 12.0),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                    ),
-                    onPressed: () {
-                      // Logique de connexion ici
-                    },
-                    child: const Text(
-                      "SE CONNECTER",
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
-                  ),
-                ],
-              ),
-
-            ],
-          ),
-        ),
-      ),
+      body: HomePage(title: "Gestion Emargements")
     );
   }
 }
